@@ -25,10 +25,11 @@ class Turn
 		puts "#{player.name}: What is #{num_one} + #{num_two}"
 		answer = get_answer
 		if answer == answer(num_one, num_two)
-			puts "That is correct"
+			puts "That is correct!"
+			player.points += 1
 		else
-			puts "That is incorrect"
-			player.num_attempts += 1
+			puts "That is incorrect!"
+			player.attempt_increase
 		end
 	end
 
